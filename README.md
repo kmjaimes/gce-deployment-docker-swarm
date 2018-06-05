@@ -1,6 +1,6 @@
 README.md
 
-This deployment will create five instances and add them to a docker swarm in Google Compute Engine. 
+This is a deployment for Google Compute Engine that will create five instances in different zones and automatically initialize and add all nodes to a Docker Swarm. 
 
 # Method of Deployment
 
