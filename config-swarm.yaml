@@ -1,0 +1,31 @@
+imports:
+- path: top-template-swarm.py
+- path: swarm-manager-origin.py
+- path: swarm-manager-instance.py
+- path: manager-group-manager.py
+- path: swarm-worker-instance.py
+- path: worker-group-manager.py
+- path: swarm-firewall.py
+
+
+resources:
+- name: top-template-swarm
+  type: top-template-swarm.py
+  properties:
+    project: [YOUR PROJECT NAME]
+    network: global/networks/[YOUR NETWORK NAME]
+    machine_type: n1-standard-2
+    sourceImage: projects/debian-cloud/global/images/debian-9-stretch-v20170829
+    region: us-central1
+    zone: us-central1-a
+  
+
+    #instance group manager
+    target_size: 2
+
+
+#gcloud deployment-manager deployments create swarm --config config-swarm.yaml --automatic-rollback-on-error
+#gcloud deployment-manager deployments delete swarm
+
+  
+
